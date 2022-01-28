@@ -13,8 +13,8 @@ a = soup.findAll('a')
 linklist = []
 for i in a:
     href = i.get('href')
-    parcala = href.split('/')
-    if 'itm' in parcala:
+    parserLink = href.split('/')
+    if 'itm' in parserLink:
         linklist.append(href)
 
 for b in linklist:
