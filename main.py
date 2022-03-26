@@ -1,6 +1,6 @@
+#import modules
 import requests
 from bs4 import BeautifulSoup
-
 
 def parcala(string):
     par = string.split('/')
@@ -8,7 +8,7 @@ def parcala(string):
         return par
 
 r = requests.get('https://www.ebay.co.uk/sch/171146/i.html?_from=R40&_nkw=dress&LH_TitleDesc=0')
-soup = BeautifulSoup(r.content, 'html.parser')
+soup = BeautifulSoup(r.content, 'html.parser') 
 a = soup.findAll('a')
 linklist = []
 for i in a:
